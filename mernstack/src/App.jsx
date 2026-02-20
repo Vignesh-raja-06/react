@@ -1,35 +1,21 @@
-import './App.css';
+import React, { useState } from "react";
 
 function App() {
-  const first = [1, 2, 3];
-  const second = [...first, 4, 5, 6];
-
-  const fruit = ['apple', 'banana', 'orange'];
-
-  class Person {
-    constructor(Name, Age) {
-      this.name = Name;
-      this.age = Age;
-    }
-    greet() {
-      return `Hello, my name is ${this.name} and I am ${this.age} years old`;
-    }
-  }
-
-  const p = new Person("Vicky", 20);
-  const [a, b, c] = first;
+  const [count, setCount] = useState(0);
 
   return (
     <div>
-      <ul>
-        {fruit.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-      <p>First array: {first.join(', ')}</p>
-      <p>Person: {p.name}, Age: {p.age}</p>
-      <p>{p.greet()}</p>
-      <p>Destructured values: a={a}, b={b}, c={c}</p>
+      <h1>topper student</h1>
+      <h2>Count: {count}</h2>
+      <img
+        src="https://static.vecteezy.com/system/resources/previews/024/724/633/non_2x/a-happy-smiling-young-college-student-with-a-book-in-hand-isolated-on-a-transparent-background-generative-ai-free-png.png"
+        alt="student"
+        width="500"
+      />
+      <br />
+      <button onClick={() => setCount(count + 1)}>Add</button>
+      
+      <button onClick={() => setCount(count - 1)}>minus</button>
     </div>
   );
 }
