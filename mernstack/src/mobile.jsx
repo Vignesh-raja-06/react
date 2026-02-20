@@ -9,12 +9,12 @@ const mobile = [
     {
         id: 2,
         name: "Samsung",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg",
+        logo: "https://tse4.mm.bing.net/th/id/OIP.WfEmMWIV_I5jxZVCDMo7ZwHaD2?rs=1&pid=ImgDetMain&o=7&rm=3",
     },
     {
         id: 3,
-        name: "OnePlus",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/4/4e/OnePlus_logo.svg",
+        name: "Realmi",
+        logo: "https://static.vecteezy.com/system/resources/previews/019/956/208/non_2x/realme-transparent-realme-free-free-png.png",
     },
     {
         id: 4,
@@ -25,12 +25,14 @@ const mobile = [
 
     const Mobile = () => {
     return (
+        <>
+        <h1>Reward :</h1>
         <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
         {mobile.map((brand) => (
             <div
             key={brand.id}
             style={{
-                border: "1px solid #ddd",
+                border: "9px solid #ddd",
                 borderRadius: "10px",
                 padding: "10px",
                 width: "150px",
@@ -47,6 +49,7 @@ const mobile = [
             </div>
         ))}
         </div>
+        </>
     );
     };
 
